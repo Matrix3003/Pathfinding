@@ -1,0 +1,7 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Scriptable", menuName = "EditorForge/Scriptable", order = 0)]
+public class {file} : ScriptableObject 
+{
+    
+}

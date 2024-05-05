@@ -32,6 +32,37 @@ Transform:
   - {fileID: 8753647660380174169}
   m_Father: {fileID: 1141810038356756338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8571433131571355183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3636868669779579539}
+  m_Layer: 0
+  m_Name: Player Transport Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3636868669779579539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8571433131571355183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.016, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141810038356756338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8703644242208438580
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +94,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4236597433678137576}
+  - {fileID: 3636868669779579539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140739315497175307
@@ -77,9 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9113fb8835ff0114b986b425cae0a466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _costToCrossTile: 1
-  _isObstacle: 0
-  _neighborsOnTile: []
+  Cost: 1
+  <IsObstacle>k__BackingField: 0
+  <MovementPosition>k__BackingField: {fileID: 3636868669779579539}
+  <Model>k__BackingField: {fileID: 7349100331020549897}
+  <NeighborsOnTile>k__BackingField: []
 --- !u!1001 &2299062180577054972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,8 +169,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7914808445487250719, guid: a22353c07190acd49ae5412c14bd5f78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2405853201696557775}
+    - targetCorrespondingSourceObject: {fileID: 7914808445487250719, guid: a22353c07190acd49ae5412c14bd5f78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7349100331020549897}
   m_SourcePrefab: {fileID: 100100000, guid: a22353c07190acd49ae5412c14bd5f78, type: 3}
+--- !u!1 &8228327790082256355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7914808445487250719, guid: a22353c07190acd49ae5412c14bd5f78, type: 3}
+  m_PrefabInstance: {fileID: 2299062180577054972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2405853201696557775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228327790082256355}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7349100331020549897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228327790082256355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529efd49e0f2a5f4b8b514f1302d80c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentNode: {fileID: 2140739315497175307}
+  _deafaultMaterial: {fileID: 2100000, guid: 807b86b3a8b60074ba9e80bdbae48d77, type: 2}
+  _highlightedMaterial: {fileID: 2100000, guid: 1d66ff338af31784b91cac8970f605c5, type: 2}
 --- !u!4 &8753647660380174169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7394027630245652389, guid: a22353c07190acd49ae5412c14bd5f78, type: 3}

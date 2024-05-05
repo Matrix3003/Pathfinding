@@ -1,0 +1,14 @@
+{
+    "name": "EditorForge.CustomHeader",
+    "rootNamespace": "EditorForge.CustomHeader",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
